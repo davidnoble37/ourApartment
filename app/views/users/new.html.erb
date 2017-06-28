@@ -1,0 +1,18 @@
+<h1>New User</h1>
+
+<%= form_for @user do |u| %>
+  <%= u.text_field :name, placeholder: 'Name' %> <br>
+  <%= u.text_field :apt_num, placeholder: 'Apartment Number' %> <br>
+  <%= u.email_field :email, placeholder: 'Email' %> <br>
+  <%= u.text_field :phone, placeholder: 'Phone #' %> <br>
+
+  <%= u.text_field :password, placeholder: 'Password' %> <br>
+
+  <%= u.text_field :roommates, placeholder: 'Roommates' %> <br>
+  <%= u.text_field :hobbies, placeholder: 'Hobbies' %> <br>
+  <%= u.text_field :fav_local, placeholder: 'Email' %> <br>
+  <%= u.text_field :orig_home, placeholder: 'Originally From' %> <br>
+  <%= u.text_field :move_yr, placeholder: 'Move Year' %> <br>
+  <%= u.text_field :photo_url, placeholder: 'Photo Url' %> <br>
+  <%= u.submit %>
+<% end %>

@@ -1,0 +1,19 @@
+<h1><%= @user.name %></h1>
+
+<ul>
+<%= image_tag("#{@user.photo_url}", size: "100x100", alt: "photo") %><br>
+Email: <%= @user.email %> <br>
+Phone Number: <%= @user.phone %> <br>
+Apt #: <%= @user.apt_num %> <br>
+Lives With: <%= @user.roommates %> <br>
+Hobbies: <%= @user.hobbies %> <br>
+Favorite Local Businesses: <%= @user.fav_local %> <br>
+Moved to Apartment: <%= @user.move_yr %> <br>
+Originally From: <%= @user.orig_home %> <br>
+
+</ul>
+
+<%= link_to "Back to Directory", users_path %>
+
+<%= link_to "Edit Profile", edit_user_path %>
+<%= link_to 'Delete Profile', @user, method: :delete, data: {confirm: "Are you sure you want to delete your profile?"}  %>

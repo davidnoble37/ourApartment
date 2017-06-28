@@ -1,0 +1,7 @@
+<h1>Topics</h1>
+
+<div class="list-group">
+<% @topics.each do |t| %>
+  <li class="list-group-item"><%= link_to t.subject, topic_path(t) %></li>
+<% end %>
+</div>

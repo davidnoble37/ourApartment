@@ -1,0 +1,21 @@
+<h1><%= @message.subject %></h1>
+<p><%= User.find(@message.user_id).name %></p>
+<p><%= @message.body %></p>
+
+<% if @message.replies.length != 0 %>
+  <div class="list-group">
+    <% @message.replies.each do |r| %>
+      <li class="list-group-item"><%= r.body %></li>
+    <% end %>
+  </div>
+<% end %>
+
+<%= form_for [@topic, @message, @reply] do |m| %>
+  <%= m.text_area :body, placeholder: 'Reply' %> <br>
+  <%= m.submit %>
+<% end %>
+
+
+<%= link_to 'Delete Message', topic_message_path(@topic.id, @message.id), method: :delete, data: {confirm: "Are you sure you want to delete this message?"}  %> <br><br>
+
+<%= link_to "Back to Messages", topic_messages_path(@topic.id, @message.id) %>

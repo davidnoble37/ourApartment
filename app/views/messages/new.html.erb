@@ -1,0 +1,7 @@
+<h1>New Message</h1>
+
+<%= form_for @message do |m| %>
+  <%= m.text_field :subject, placeholder: 'Subject' %> <br>
+  <%= m.text_field :body, placeholder: 'Body' %> <br>
+  <%= m.submit %>
+<% end %>

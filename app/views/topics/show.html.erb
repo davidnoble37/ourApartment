@@ -1,0 +1,22 @@
+<h1><%= @topic.subject %></h1>
+
+<div class="container">
+  <h4>Conversations:</h4><br>
+  <% if @topic.messages.length != 0 %>
+    <div class="list-group">
+      <% @topic.messages.each do |m| %>
+        <li class="list-group-item"><%= link_to m.subject, topic_message_path(@topic.id, m.id) %></li>
+      <% end %>
+    </div>
+  <% end %>
+
+
+  <br><br>
+  <h4>Start a new conversation:</h4><br>
+  <%= form_for [@topic, @message] do |m| %>
+    <%= m.text_field :subject, placeholder: 'Subject' %> <br>
+    <%= m.text_area :body, placeholder: 'Body' %> <br>
+    <%= m.submit %>
+  <% end %>
+
+</div>

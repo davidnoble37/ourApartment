@@ -1,0 +1,9 @@
+<h1>Messages</h1>
+
+<%= link_to "Create a New Message", topic_new_message_path %>
+
+<div class="list-group">
+<% @messages.each do |m| %>
+  <li class="list-group-item"><%= link_to m.subject, topic_message_path(@topic.id, m.id) %></li>
+<% end %>
+</div>
