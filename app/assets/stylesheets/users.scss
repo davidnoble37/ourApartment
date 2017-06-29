@@ -3,10 +3,61 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-#directory{
-  margin: 20px;
+#image_wrapper{
+  text-align: left;
+  padding-bottom: 10px;
 }
 
-h1{
-  padding: 20px;
+#about_wrapper {
+  text-align: left;
+
+}
+
+#contact_wrapper   {
+  clear: both;
+  float: left;
+  width: 20%;
+  text-align: left;
+}
+
+span{
+  font-weight: bold;
+}
+
+footer {
+  clear: both;
+}
+
+h1 {
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+h4{
+  padding-bottom: 15px;
+}
+
+#directory {
+  margin: 0 auto 25px auto;
+  text-align: center;
+}
+
+#directory img {
+  margin: 0 auto;
+}
+
+.container {
+  background: lightgray;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+img {
+  width: 250px;
+  height: auto;
+}
+
+ul {
+  padding-left: 0;
 }

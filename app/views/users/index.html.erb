@@ -1,12 +1,13 @@
-<h1>My Neighbors</h1>
+<div class='container'>
+  <h1>My Neighbors</h1>
 
-
-<div class="row">
-  <% @users.each do |u| %>
-    <div class="col-sm-2" id="directory" >
-      <%= link_to image_tag("#{u.photo_url}", size: "150x250", alt: "photo"), user_path(u) %><br>
-      <%= link_to u.name, user_path(u) %><br>
-      Apt: <%= u.apt_num %><br>
-    </div>
-  <% end %>
+  <div class="row">
+    <% @users.each do |u| %>
+      <div class="col-md-3" id="directory" >
+        <%= link_to image_tag("#{u.photo_url}", size: "150x250", alt: "photo"), user_path(u) %><br>
+        <%= link_to u.name, user_path(u) %><br>
+        Apt: <%= u.apt_num %><br>
+      </div>
+    <% end %>
+  </div>
 </div>

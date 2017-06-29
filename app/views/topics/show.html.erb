@@ -1,22 +1,30 @@
 <h1><%= @topic.subject %></h1>
 
 <div class="container">
-  <h4>Conversations:</h4><br>
-  <% if @topic.messages.length != 0 %>
-    <div class="list-group">
-      <% @topic.messages.each do |m| %>
-        <li class="list-group-item"><%= link_to m.subject, topic_message_path(@topic.id, m.id) %></li>
-      <% end %>
-    </div>
-  <% end %>
+  <div class='topicwrap'>
+    <h4>Conversations:</h4><br>
+    <% if @topic.messages.length != 0 %>
+      <div class="list-group">
+        <% @topic.messages.each do |m| %>
+          <li class="list-group-item">
+            <%= link_to m.subject, topic_message_path(@topic.id, m.id) %>
+            <br>
+            <p><%= m.body %></p>
+            <%= User.find(m.user_id).name %>
+            Posted <%= time_ago_in_words m.created_at %> ago
+          </li>
+        <% end %>
+      </div>
+    <% end %>
 
+    <br><br>
 
-  <br><br>
-  <h4>Start a new conversation:</h4><br>
-  <%= form_for [@topic, @message] do |m| %>
-    <%= m.text_field :subject, placeholder: 'Subject' %> <br>
-    <%= m.text_area :body, placeholder: 'Body' %> <br>
-    <%= m.submit %>
-  <% end %>
+    <h4>Start a new conversation:</h4><br>
+    <%= form_for [@topic, @message] do |m| %>
+      <%= m.text_field :subject, placeholder: 'Subject', class: 'form-control' %> <br>
+      <%= m.text_area :body, placeholder: 'Body', class: 'form-control' %> <br>
+      <%= m.submit class: 'btn btn-success' %>
+    <% end %>
 
+  </div>
 </div>
