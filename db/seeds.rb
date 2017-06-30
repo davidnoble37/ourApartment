@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-User.create(name: 'David Noble', email: "david@gmail.com", phone: "713-591-0344", password: "password", apt_num: 1)
 
 Topic.create(subject: 'General', user_id: 1)
 Topic.create(subject: 'Maintenance', user_id: 1)
