@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
 
-  before_action :authorize,  only: [:new, :show, :destroy, :create, :index]
+  before_action :authorize,  only: [:destroy, :create, :index]
 
   def index
     @topic = Topic.find(params[:topic_id])
