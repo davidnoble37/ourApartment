@@ -48,7 +48,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:name, :apt_num, :email, :password, :phone, :photo_url, :roommates, :hobbies, :fav_local, :orig_home, :move_yr)
+    params.require(:user).permit(:name, :apt_num, :email, :password, :phone, :photo_url, :roommates, :hobbies, :fav_local, :orig_home, :move_yr, :photo_url_file_name, :photo_url_content_type, :photo_url_file_size, :photo_url_updated_at)
   end
 
 end
