@@ -1,24 +1,21 @@
-# README
+ourApartment Readme
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Overview
 
-Things you may want to cover:
+ourApartment is an apartment complex social network. Each resident has a profile page and is able to post and reply on message boards related to relevant community topics.
 
-* Ruby version
 
-* System dependencies
+Link to ourApartment:  https://vast-taiga-86419.herokuapp.com/
 
-* Configuration
+Link to my Trello board: https://trello.com/b/80gFuXmY/ourapartment
 
-* Database creation
 
-* Database initialization
+Underlying Technologies
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ourApartment is built using:
+HTML
+CSS
+Ruby on Rails
+Bootstrap
+AWS S3
+Paperclip
