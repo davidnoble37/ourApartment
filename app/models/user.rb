@@ -1,9 +1,9 @@
 class User < ApplicationRecord
 has_secure_password
 
-has_many :topics
-has_many :messages
-has_many :replies
+has_many :topics, dependent: :destroy
+has_many :messages, dependent: :destroy
+has_many :replies, dependent: :destroy
 
 has_attached_file :photo_url,
                   styles: { medium: "500x500#", thumb: "100x100#" },
